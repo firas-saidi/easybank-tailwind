@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .button {
+    @apply block rounded-full bg-slate-300 bg-gradient-to-r from-green-300 to-cyan-500 px-5 py-2 font-bold text-white transition duration-150 ease-in;
+  }
+
+  .button:hover {
+    @apply opacity-80;
+  }
+
+  .navLink {
+    @apply relative mx-auto w-fit font-normal text-slate-400 transition duration-150 ease-in;
+  }
+
+  .navLink:hover {
+    @apply cursor-pointer text-black before:opacity-100;
+  }
+
+  .navLink::before {
+    @apply pointer-events-none absolute -bottom-4 left-0 h-1 w-full bg-gradient-to-r from-green-300 to-cyan-500 opacity-0 transition duration-150 ease-in content-[""];
+  }
+
+  .footerLink {
+    @apply lg:mx-0 mx-auto  w-fit font-normal text-white transition duration-150 ease-in;
+  }
+
+  .footerLink:hover {
+    @apply cursor-pointer text-emerald-500;
+  }
+}
